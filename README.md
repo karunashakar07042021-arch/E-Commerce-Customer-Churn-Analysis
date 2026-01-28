@@ -1,51 +1,78 @@
 # 📊 E-Commerce Customer Churn Analysis (MySQL)
 
-# 📌 Project Overview
+## 📌 Project Overview
+Customer churn is a major challenge in the e-commerce industry. This project analyzes customer behavior and transactional data to identify churn patterns and key drivers affecting customer retention. The analysis helps businesses take data-driven decisions to reduce churn and improve long-term profitability.
 
-Customer churn is a critical challenge in the e-commerce industry.This project analyzes customer churn behavior using historical e-commerce data to identify patterns, drivers, and actionable insights that help businesses improve customer retention.The analysis focuses on customer demographics, purchasing behavior, satisfaction levels, complaints, and payment preferences using MySQL.
+This project is implemented using **MySQL** and focuses on data cleaning, transformation, and analytical querying.
 
-# 🎯 Objectives
+---
 
-Clean and preprocess raw customer data
+## 🎯 Objectives
+- Analyze churned vs active customers
+- Clean and preprocess raw customer data
+- Handle missing values and outliers
+- Standardize inconsistent data
+- Perform SQL-based exploratory analysis
+- Generate actionable business insights
 
-Handle missing values and outliers
+---
 
-Standardize inconsistent data
+## 🗂 Dataset
+- **Domain:** E-Commerce
+- **Format:** SQL Text File
+- **Key Attributes:**
+  - Tenure
+  - Preferred Payment Mode
+  - Preferred Order Category
+  - Satisfaction Score
+  - Coupon Usage
+  - Order Count
+  - Complaint Indicator
+  - Churn Indicator
 
-Create derived columns for better analysis
+---
 
-Perform SQL-based exploratory and analytical queries
+## 🔧 Tools & Technologies
+- **Database:** MySQL  
+- **Language:** SQL  
+- **Environment:** MySQL Workbench  
 
-Extract actionable business insights related to churn
+---
 
-# 🔧 Tools & Technologies
 
-Database: **MySQL**
+## 📈 Key Analysis Performed
+- Count of churned vs active customers
+- Average tenure and cashback of churned customers
+- Complaint percentage among churned customers
+- City tier with highest churn
+- Preferred payment modes of active customers
+- Coupon usage analysis by gender
+- Distance-based churn categorization
+- Customer returns analysis using joins
 
-Query Language: **SQL**
+---
+## 🧠 Key Insights
+- Customers who raised complaints show higher churn probability
+- City Tier-1 has the highest churn concentration
+- Payment mode preferences influence churn behavior
+- Distance from warehouse impacts customer satisfaction and churn
+---
 
-Environment: **MySQL Workbench**
+## 🚀 Conclusion
+The analysis provides meaningful insights into customer churn behavior and highlights critical factors influencing customer attrition. These insights can help e-commerce businesses build targeted retention strategies and improve customer experience.
 
-# 📈 Key Analysis Performed
+---
 
-Churned vs Active customer count
+## 📂 Repository Structure
+```
+E-Commerce-Customer-Churn-Analysis/
+│
+├── README.md
+├── churn_analysis.sql
+├── ecommerce_churn_data.sql text file
+├── Project_Report.pdf
+├── ER_Diagram.png
+```
 
-Average tenure & cashback of churned customers
 
-Complaint percentage among churned users
 
-Preferred payment mode of active customers
-
-City tier analysis for churn
-
-Coupon usage by gender
-
-Preferred order categories
-
-Distance-based churn analysis
-
-Customer return analysis using joins
-
-# 🚀 Conclusion
-
-The project provides valuable insights into customer churn behavior and highlights key factors influencing attrition. These insights can help e-commerce businesses design targeted retention strategies and improve customer satisfaction.
