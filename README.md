@@ -1,12 +1,10 @@
 # 📊 E-Commerce Customer Churn Analysis (MySQL)
 
-**📌 Project Overview**
+# 📌 Project Overview
 
-Customer churn is a critical challenge in the e-commerce industry.This project analyzes customer churn behavior using historical e-commerce data to identify patterns, drivers, and actionable insights that help businesses improve customer retention.
+Customer churn is a critical challenge in the e-commerce industry.This project analyzes customer churn behavior using historical e-commerce data to identify patterns, drivers, and actionable insights that help businesses improve customer retention.The analysis focuses on customer demographics, purchasing behavior, satisfaction levels, complaints, and payment preferences using MySQL.
 
-The analysis focuses on customer demographics, purchasing behavior, satisfaction levels, complaints, and payment preferences using MySQL.
-
-**🎯 Objectives**
+# 🎯 Objectives
 
 Clean and preprocess raw customer data
 
@@ -20,7 +18,7 @@ Perform SQL-based exploratory and analytical queries
 
 Extract actionable business insights related to churn
 
-**🔧 Tools & Technologies**
+# 🔧 Tools & Technologies
 
 Database: **MySQL**
 
@@ -28,7 +26,7 @@ Query Language: **SQL**
 
 Environment: **MySQL Workbench**
 
-**📈 Key Analysis Performed**
+# 📈 Key Analysis Performed
 
 Churned vs Active customer count
 
@@ -48,6 +46,6 @@ Distance-based churn analysis
 
 Customer return analysis using joins
 
-**🚀 Conclusion**
+# 🚀 Conclusion
 
 The project provides valuable insights into customer churn behavior and highlights key factors influencing attrition. These insights can help e-commerce businesses design targeted retention strategies and improve customer satisfaction.
