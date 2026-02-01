@@ -5904,8 +5904,9 @@ GROUP BY PreferredOrderCat;
 have the maximum satisfaction score.*/
 
 
-SELECT SUM(OrderCount) AS TOTAL_ORDER_COUNT,MAX(SatisfactionScore) AS MAX_SATISFACTION_SCORE FROM CUSTOMER_CHURN
-WHERE PreferredPaymentMode='Credit Card';
+SELECT SUM(OrderCount) AS TOTAL_ORDER_COUNT FROM CUSTOMER_CHURN
+WHERE PreferredPaymentMode='Credit Card'
+AND SatisfactionScore= (SELECT MAX(SatisfactionScore) FROM customer_churn);
 
 -- What is the average satisfaction score of customers who have complained? --
 
@@ -5933,7 +5934,7 @@ SELECT *  FROM CUSTOMER_CHURN;
 
 SELECT PreferredPaymentMode,COUNT(*) AS CUSTOMER_COUNT FROM CUSTOMER_CHURN
 GROUP  BY PreferredPaymentMode
-HAVING AVG(Tenure)>10 AND SUM(OrderCount)>500;
+HAVING AVG(Tenure)=10 AND SUM(OrderCount)>500;
 
 /*Categorize customers based on their distance from the warehouse to home such 
 as 'Very Close Distance' for distances <=5km, 'Close Distance' for <=10km, 
@@ -5948,8 +5949,10 @@ SELECT
        WHEN WarehouseToHome <=15 THEN 'Moderate Distance'
         WHEN WarehouseToHome >15 THEN 'Far Distance'
         END AS DISTANCE_CATEGORY,
-        ChurnStatus
-	FROM CUSTOMER_CHURN;
+        ChurnStatus,count(*) As CUSTOMER_COUNT
+	FROM CUSTOMER_CHURN
+    GROUP BY  DISTANCE_CATEGORY,
+        ChurnStatus ;
     
     
 /*List the customer’s order details who are married, live in City Tier-1, and their 
